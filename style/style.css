@@ -1,27 +1,4 @@
-body{
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-header{background-color: #707070; padding: 66px 16px;}
-header p {color: white;}
-
-#hd-text-one, #hd-text-two, #hd-text-three {margin: 0;}
-#hd-text-one {font-size: 20px;}
-#hd-text-two {font-size: 40px; font-weight: bold;}
-#hd-text-three {font-size: 14px; margin-top: 9px; line-height: 16px;}
-
-nav a {
-    background-color: whitesmoke;
-    border: 1px solid #707070;
-    border-radius: 4px;
-    box-shadow: 0px 1px 6px #00000029;
-    color: #888888;
-    display: block;
-    font-size: 14px;
-    text-align: center;
-    text-decoration: none;
-    padding: 12px 31px;
-}
+body{font-family: Arial, Helvetica, sans-serif;}
 
 #ajude-algoritmo{color: #888888; padding: 0 15px;}
 #ajude-algoritmo h1 {font-size: 20px; font-weight: normal;}
@@ -33,3 +10,65 @@ form input[type="submit"]{font-size: 16px;}
 
 label[for="frm-gender-mal"] {margin-right: 40px !important;} /* ATENCAO: REVER USO DO IMPORT */
 label[for="frm-gender-mal"], label[for="frm-gender-fem"]{display: inline-block; margin: 20px 0;}
+
+/* COMPONENTES: BOTOES*/
+
+.btn, .btn-shadow {
+    background-color: white;
+    border: 1px solid #707070;
+    border-radius: 4px;
+    color: #888888;
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+}
+
+.btn-shadow {box-shadow: 0px 1px 6px #00000029;}
+.nav-btns {font-size: 14px; padding: 12px 31px;}
+.btn-lg {font-size: 16px; padding-top: 11px; padding-bottom: 10px; text-align: center;}
+
+/* HEADER SECTION */
+
+header {background-color: #707070; padding: 0 16px;}
+header p {color: white;}
+
+#hd-text-one {font-size: 20px;}
+#hd-text-two {font-size: 40px; font-weight: bold;}
+#hd-text-three {font-size: 14px;}
+
+#hd-text {
+    display: grid; 
+    grid-template-rows: 23px 48px 32px; 
+    padding-top: 66px;
+    padding-bottom: 28px;
+}
+
+#hd-nav{
+    display: grid; 
+    grid-template-columns: 1fr 1fr; 
+    gap: 20px 21px;
+    padding-top: 28px;
+    padding-bottom: 69px;
+}
+
+@media (min-width: 768px){
+    header{text-align: center;}
+    #hd-text{padding-bottom: 25px;}
+    #hd-nav{
+        /*grid-template-columns: repeat(4, auto);*/
+        justify-content: center;
+        grid-template-columns: repeat(4, max-content);
+        gap: 0 40px;
+        padding-top: 25px;
+        padding-bottom: 129px;
+    }
+}
+
+/* FORM SECTION */
+
+.CSS {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 34.6% 22.6%;
+    column-gap: 4%;
+}
