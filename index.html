@@ -30,12 +30,12 @@
             <p>Morbi viverra, magna ac luctus commodo, odio ante suscipit libero, at mattis augue est vel metus.</p>
         </div>
         <form id="ajude-algoritmo-form" action="">
-            <label for="">Seu nome:</label>
-            <input class="form-input-box" type="text" required>
-            <label for="">E-mail:</label>
-            <input class="form-input-box" type="email" required>
-            <label for="">CPF:</label>
-            <input class="form-input-box" type="text" required>
+            <label for="ajude-algoritmo-inp-nome">Seu nome:</label>
+            <input id="ajude-algoritmo-inp-nome" class="form-input-box" type="text" required>
+            <label for="ajude-algoritmo-inp-email">E-mail:</label>
+            <input id="ajude-algoritmo-inp-email" class="form-input-box" type="email" required>
+            <label for="ajude-algoritmo-inp-cpf">CPF:</label>
+            <input id="ajude-algoritmo-inp-cpf" class="form-input-box" type="text" required>
             <div>
                 <input id="frm-gender-mal" type="radio" name="genero">
                 <label for="frm-gender-mal">Masculino</label>
@@ -45,24 +45,30 @@
             <input id="ajude-algoritmo-inp-btn" class="btn btn-lg" type="submit" name="Enviar">
         </form>
     </section>
-    <section name="produtos"><!-- SELECAO ESPCIAL - PRODUTOS -->
+    <section id="produtos"><!-- SELECAO ESPCIAL - PRODUTOS -->
 
     </section>
-    <section name="compartilhe"><!-- COMPARTILHE -->
+    <section id="compartilhe" name="compartilhe"><!-- COMPARTILHE -->
         <h1>Compartilhe a novidade</h1>
         <p>Quer que seus amigos também ganhem a lista personalizada deles? Preencha agora!</p>
         <form action="">
-            <label for="">Nome do seu amigo:</label>
-            <input type="text" required>
-            <label for="">E-mail:</label>
-            <input type="email" required>
-            <input class="btn btn-lg" type="submit" name="enviar" value="Enviar agora">
+            <div id="grid-form-compartilhe">
+                <div>
+                    <label for="compartilhe-inp-nome">Nome do seu amigo:</label>
+                    <input id="compartilhe-inp-nome" class="form-input-box" type="text" required>
+                </div>
+                <div>
+                    <label for="compartilhe-inp-mail">E-mail:</label>
+                    <input id="compartilhe-inp-mail" class="form-input-box" type="email" required>
+                </div>
+            </div>
+            <input id="compartilhe-inp-submit" class="btn btn-lg" type="submit" name="enviar" value="Enviar agora">
         </form>
     </section>
     <footer>
-        Testando suas habilidades em HTML, CSS e JS. 
-        Linx Impulse 
-        2019
+       <p>Testando suas habilidades em HTML, CSS e JS.</p>
+       <p>Linx Impulse</p>
+       <p>2020</p>
     </footer>
 </body>
 </html>

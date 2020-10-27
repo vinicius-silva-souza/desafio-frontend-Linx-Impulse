@@ -48,6 +48,26 @@ form input[type="submit"]{font-size: 16px;}
 label[for="frm-gender-mal"] {margin-right: 40px !important;} /* ATENCAO: REVER USO DO IMPORT */
 label[for="frm-gender-mal"], label[for="frm-gender-fem"]{display: inline-block; margin: 20px 0;}
 
+/* COMPARTILHE NOVIDADE */
+
+#compartilhe {color: #888888; padding-left: 9px; padding-right: 20px; padding-bottom: 43px;}
+#compartilhe h1 {font-size: 18px; text-align: center;}
+#compartilhe p {font-size: 14px; text-align: center; margin: 28px 0;} 
+#compartilhe-inp-submit {display: block; width: 50%; margin: 42px auto;}
+
+/* FOOTER */
+
+footer {
+    background-color: #707070; 
+    color: white;
+    padding-top: 71px;
+    padding-left: 80px;  
+    padding-right: 80px;
+    padding-bottom: 36px;
+}
+
+footer p {text-align: center; margin-bottom: 8px;}
+
 @media (min-width: 768px){
     header{text-align: center; padding: 0;}
     #hd-text{padding-bottom: 25px;}
@@ -67,4 +87,12 @@ label[for="frm-gender-mal"], label[for="frm-gender-fem"]{display: inline-block; 
         padding-top: 21px;
         padding-bottom: 79px;
     }
+    #grid-form-compartilhe {
+        justify-content: center;
+        display: grid;
+        grid-template-columns: repeat(2, 30%);
+        grid-auto-columns: 50%;
+        column-gap: 40px;
+    }
+    #compartilhe-inp-submit {width: 25%;}
 }
