@@ -48,6 +48,23 @@ form input[type="submit"]{font-size: 16px;}
 label[for="frm-gender-mal"] {margin-right: 40px !important;} /* ATENCAO: REVER USO DO IMPORT */
 label[for="frm-gender-mal"], label[for="frm-gender-fem"]{display: inline-block; margin: 20px 0;}
 
+/* SELECAO ESPECIAL (PRODUTOS) */
+
+#produtos {display: grid; grid-auto-rows: 129px; row-gap: 30px; color: #888888;}
+.produto {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(2, 45%);
+    column-gap: 23px;
+}
+.produto img {width: 100%; max-height: 100%; object-fit: cover;}
+.produto div{display: grid; grid-template-rows: 29px 20px 26px 24px 30px;}
+.nome-produto{display: block; font-size: 14px;}
+.preco-produto{display: block; font-size: 12px;}
+.oferta-produto{display: block; font-size: 16px; font-weight: bold;}
+.parcela-produto{display: block; font-size: 12px;}
+.btn-comprar-produto{font-size: 14px;}
+
 /* COMPARTILHE NOVIDADE */
 
 #compartilhe {color: #888888; padding-left: 9px; padding-right: 20px; padding-bottom: 43px;}
