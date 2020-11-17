@@ -11,21 +11,43 @@ body{font-family: Arial, Helvetica, sans-serif;}
     text-align: center;
     text-decoration: none;
 }
+
 .btn-shadow {box-shadow: 0px 1px 6px #00000029;}
 .btn-lg {font-size: 16px; padding-top: 11px; padding-bottom: 10px; text-align: center;}
 .form-input-box {width: 100%; height: 30px; border: 1px solid #707070; padding: 0 5px;}
 
 /* HEADER SECTION */
 
-header {background-color: #707070; padding: 0 16px;} header p {color: white;}
-#hd-text-one {font-size: 20px;} #hd-text-two {font-size: 40px; font-weight: bold;}
-#hd-text-three {font-size: 14px;} .nav-btns {font-size: 14px; padding: 12px 31px;}
+header {background-color: #707070; padding: 0 16px;} 
+header p {color: white;}
+#hd-text-one {font-size: 20px;} 
+#hd-text-two {font-size: 40px; font-weight: bold;}
+#hd-text-three {font-size: 14px;} 
+.nav-btns {font-size: 14px; padding: 12px 31px;}
+
 #hd-text {
-    display: grid; grid-template-rows: 23px 48px 32px; padding-top: 66px; padding-bottom: 28px;
+    display: grid; 
+    grid-template-rows: 23px 48px 32px; 
+    padding-top: 66px; 
+    padding-bottom: 28px;
 }
+
 #hd-nav{
     display: grid; grid-template-columns: 1fr 1fr; gap: 20px 21px; padding-top: 28px;
     padding-bottom: 69px;
+}
+
+@media (min-width: 768px){
+    header{text-align: center; padding: 0;}
+    #hd-text{padding-bottom: 25px;}
+    #hd-nav{
+        /*grid-template-columns: repeat(4, auto);*/
+        justify-content: center;
+        grid-template-columns: repeat(4, max-content);
+        gap: 0 40px;
+        padding-top: 25px;
+        padding-bottom: 129px;
+    }
 }
 
 /* FORM SECTION */
@@ -48,26 +70,49 @@ form input[type="submit"]{font-size: 16px;}
 label[for="frm-gender-mal"] {margin-right: 40px !important;} /* ATENCAO: REVER USO DO IMPORT */
 label[for="frm-gender-mal"], label[for="frm-gender-fem"]{display: inline-block; margin: 20px 0;}
 
+@media (min-width: 768px){
+    #ajude-algoritmo{
+        display: grid;
+        justify-content: center;
+        grid-template-columns: 34.6% 22.6%;
+        column-gap: 4%;
+        padding-top: 21px;
+        padding-bottom: 79px;
+    }
+}
 /* SELECAO ESPECIAL (PRODUTOS) */
 
 #produtos {color: #888888;}
-#produtos > div {display: grid; grid-auto-rows: 129px; row-gap: 30px;}
 #produtos h1 {text-align: center; font-weight: bold; font-size: 18px; margin-bottom: 23px;}
+#produtos-container {display: grid; row-gap: 30px;}
 #btn-mais-produtos {display: block; padding: 10px 36px; font-size: 16px; margin: 53px auto;}
+.info-produto {display: grid;}
+.img-produto {width: 100%; max-height: 100%; object-fit: cover;}
+.nome-produto {font-size: 14px;}
+.btn-comprar-produto {font-size: 14px; padding: 6px 0; cursor: pointer;}
+.preco-produto, .parcela-produto {font-size: 12px;}
+.descricao-produto {display: none;}
+.oferta-produto{font-size: 16px; font-weight: bold;}
 
-.produto {
-    display: grid;
-    justify-content: center;
-    grid-template-columns: repeat(2, 45%);
-    column-gap: 23px;
+@media(max-width: 768px){
+    .produto {
+        display: grid;
+        justify-content: center;
+        grid-template-columns: 129px 200px;
+        column-gap: 23px;
+    }
 }
-.produto img {width: 100%; max-height: 100%; object-fit: cover;}
-.produto div{display: grid; grid-template-rows: 29px 20px 26px 24px 30px;}
-.nome-produto{display: block; font-size: 14px;}
-.preco-produto{display: block; font-size: 12px;}
-.oferta-produto{display: block; font-size: 16px; font-weight: bold;}
-.parcela-produto{display: block; font-size: 12px;}
-.btn-comprar-produto{font-size: 14px;}
+
+@media(min-width: 768px){
+    #produtos-container {
+        display: grid;
+        grid-template-columns: repeat(4, 15%);
+        grid-column-gap: 41px;
+        justify-content: center;
+    }
+    .info-produto{grid-row-gap: 10px;}
+    .descricao-produto {display: block; font-size: 12px; line-height: 16px;}
+}
 
 /* COMPARTILHE NOVIDADE */
 
@@ -75,6 +120,17 @@ label[for="frm-gender-mal"], label[for="frm-gender-fem"]{display: inline-block; 
 #compartilhe h1 {font-size: 18px; text-align: center;}
 #compartilhe p {font-size: 14px; text-align: center; margin: 28px 0;} 
 #compartilhe-inp-submit {display: block; width: 50%; margin: 42px auto;}
+
+@media (min-width: 768px){
+    #grid-form-compartilhe {
+        justify-content: center;
+        display: grid;
+        grid-template-columns: repeat(2, 30%);
+        grid-auto-columns: 50%;
+        column-gap: 40px;
+    }
+    #compartilhe-inp-submit {width: 25%;}
+}
 
 /* FOOTER */
 
@@ -89,31 +145,4 @@ footer {
 
 footer p {text-align: center; margin-bottom: 8px;}
 
-@media (min-width: 768px){
-    header{text-align: center; padding: 0;}
-    #hd-text{padding-bottom: 25px;}
-    #hd-nav{
-        /*grid-template-columns: repeat(4, auto);*/
-        justify-content: center;
-        grid-template-columns: repeat(4, max-content);
-        gap: 0 40px;
-        padding-top: 25px;
-        padding-bottom: 129px;
-    }
-    #ajude-algoritmo{
-        display: grid;
-        justify-content: center;
-        grid-template-columns: 34.6% 22.6%;
-        column-gap: 4%;
-        padding-top: 21px;
-        padding-bottom: 79px;
-    }
-    #grid-form-compartilhe {
-        justify-content: center;
-        display: grid;
-        grid-template-columns: repeat(2, 30%);
-        grid-auto-columns: 50%;
-        column-gap: 40px;
-    }
-    #compartilhe-inp-submit {width: 25%;}
-}
+
