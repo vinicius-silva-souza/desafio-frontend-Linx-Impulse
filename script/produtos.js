@@ -48,7 +48,35 @@ function createCards(description, image, count, value, name, oldPrice, price){
     element.innerText = 'Comprar'
 }
 
+function loadProductsAnimation(run = true){
+    const modal = document.querySelector('.modal-container');
+    if(run){
+        let createdElement = document.createElement('div');
+        let element = document.body.appendChild(createdElement);
+        element.setAttribute('class', 'modal-container');
+        createdElement = document.createElement('div');
+        element = element.appendChild(createdElement);
+        element.setAttribute('class', 'modal-content');
+        createdElement = document.createElement('h1');
+        createdElement = element.insertAdjacentElement('beforeend', createdElement);
+        createdElement.setAttribute('class', 'modal-title');
+        createdElement.innerText = 'Carregando';
+        createdElement = document.createElement('span');
+        createdElement = element.insertAdjacentElement('beforeend', createdElement);
+        createdElement.setAttribute('class', 'modal-loader');
+        createdElement = document.createElement('p');
+        createdElement = element.insertAdjacentElement('beforeend', createdElement);
+        createdElement.setAttribute('class', 'modal-msg');
+        createdElement.innerText = 'Aguarde, requisição em andamento';
+    } else {
+        if(modal !== null){
+            document.body.removeChild(modal);
+        }
+    }
+}
+
 function request(){
+    loadProductsAnimation();
     productsRequest((produtos)=>{
         var json = produtos;
         var produtos = json.products;
@@ -63,10 +91,10 @@ function request(){
                element.price
            )
         });
+        loadProductsAnimation(false);
     })
 }
 
-window.addEventListener('load', request);
-
 const btnMaisProdutos = document.getElementById('btn-mais-produtos');
+window.addEventListener('load', request);
 btnMaisProdutos.addEventListener('click', request);
